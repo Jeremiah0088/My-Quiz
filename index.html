@@ -1,0 +1,85 @@
+<!DOCTYPE html> <html><head>
+        <title>My Quiz</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: purple;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: red;
+}
+
+h3 {
+    color: red;
+}
+
+h4 {
+    color: red;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>Which type of sky are you?</h1>
+        </div>
+        <div class="questions">
+            <h4>How many pars of shose do you have?</h4>
+            <input class="q1">
+            <button class="q1-button">Enter</button>
+
+            <img src="https://img.buzzfeed.com/buzzfeed-static/complex/images/scbl5pmzs3ewac4u1cxw/air-jordan-4-1.jpg?output-format=jpg&amp;output-quality=auto">
+            <h4>Do you prefer dogs or cats?</h4>
+            <input class="q2">
+            <button class="q2-button">Enter</button>
+
+            <img src="https://bloximages.newyork1.vip.townnews.com/montereycountyweekly.com/content/tncms/assets/v3/editorial/9/da/9daf758e-b150-11ec-acc8-37b96871acb3/6246440715af6.image.jpg?crop=1124%2C632%2C101%2C0&amp;resize=1200%2C675&amp;order=crop%2Cresize">
+
+        </div>
+        <div class="result" style="color:white">
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var q1Button = document.querySelector(".q1-button");
+var q2Button = document.querySelector(".q2-button");
+
+button.onclick = function () {
+  var q1 = document.querySelector(".q1").value;
+  var q2 = document.querySelector(".q2").value;
+};
+
+q1Button.onclick = function () {
+  var q1Input = document.querySelector(".q1").value;
+
+  if (q1Input > 10) {
+    document.querySelector(".result").innerHTML = q1Input + " wow thats a lot!"; // document.querySelector(".result").style.color = "green";
+  } else {
+    document.querySelector(".result").innerHTML = "Try again";
+    document.querySelector(".result").style.color = "red";
+  }
+};
+
+q2Button.onclick = function () {
+  var q2Input = document.querySelector(".q2").value;
+
+  if (q2Input === "") {
+    document.querySelector(".result").innerHTML = "correct!"; // document.querySelector(".result").style.color = "green";
+  } else {
+    document.querySelector(".result").innerHTML = "Try again";
+    document.querySelector(".result").style.color = "red";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInExQnV0dG9uIiwicTJCdXR0b24iLCJvbmNsaWNrIiwicTEiLCJ2YWx1ZSIsInEyIiwicTFJbnB1dCIsImlubmVySFRNTCIsInN0eWxlIiwiY29sb3IiLCJxMklucHV0Il0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxNQUFNLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFiO0FBQ0EsSUFBSUMsUUFBUSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsQ0FBZjtBQUNBLElBQUlFLFFBQVEsR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLENBQWY7O0FBQ0FGLE1BQU0sQ0FBQ0ssT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLEVBQUUsR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCSyxLQUF2QztBQUNBLE1BQUlDLEVBQUUsR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCSyxLQUF2QztBQUVILENBSkQ7O0FBS0FKLFFBQVEsQ0FBQ0UsT0FBVCxHQUFvQixZQUFXO0FBQzNCLE1BQUlJLE9BQU8sR0FBR1IsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCSyxLQUE1Qzs7QUFDQSxNQUFJRSxPQUFPLEdBQUcsRUFBZCxFQUFrQjtBQUNkUixJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NRLFNBQWxDLEdBQThDRCxPQUFPLEdBQUcsbUJBQXhELENBRGMsQ0FFZDtBQUVILEdBSkQsTUFJTztBQUNIUixJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NRLFNBQWxDLEdBQThDLFdBQTlDO0FBQ0FULElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ1MsS0FBbEMsQ0FBd0NDLEtBQXhDLEdBQWdELEtBQWhEO0FBQ0g7QUFDSixDQVZEOztBQVlBUixRQUFRLENBQUNDLE9BQVQsR0FBb0IsWUFBVztBQUMzQixNQUFJUSxPQUFPLEdBQUdaLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixFQUE4QkssS0FBNUM7O0FBQ0EsTUFBSU0sT0FBTyxLQUFLLEVBQWhCLEVBQW9CO0FBQ2hCWixJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NRLFNBQWxDLEdBQThDLFVBQTlDLENBRGdCLENBRWhCO0FBRUgsR0FKRCxNQUlPO0FBQ0hULElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ1EsU0FBbEMsR0FBOEMsV0FBOUM7QUFDQVQsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDUyxLQUFsQyxDQUF3Q0MsS0FBeEMsR0FBZ0QsS0FBaEQ7QUFDSDtBQUNKLENBVkQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbmxldCBxMUJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucTEtYnV0dG9uXCIpO1xubGV0IHEyQnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xMi1idXR0b25cIik7XG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgIGxldCBxMSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucTFcIikudmFsdWU7XG4gICAgbGV0IHEyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xMlwiKS52YWx1ZTtcblxufTtcbnExQnV0dG9uLm9uY2xpY2sgPSAoZnVuY3Rpb24oKSB7XG4gICAgbGV0IHExSW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnExXCIpLnZhbHVlO1xuICAgIGlmIChxMUlucHV0ID4gMTApIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MID0gcTFJbnB1dCArIFwiIHdvdyB0aGF0cyBhIGxvdCFcIjtcbiAgICAgICAgLy8gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG5cbiAgICB9IGVsc2Uge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPSBcIlRyeSBhZ2FpblwiO1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5zdHlsZS5jb2xvciA9IFwicmVkXCI7XG4gICAgfVxufSk7XG5cbnEyQnV0dG9uLm9uY2xpY2sgPSAoZnVuY3Rpb24oKSB7XG4gICAgbGV0IHEySW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnEyXCIpLnZhbHVlO1xuICAgIGlmIChxMklucHV0ID09PSBcIlwiKSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTCA9IFwiY29ycmVjdCFcIjtcbiAgICAgICAgLy8gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG5cbiAgICB9IGVsc2Uge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPSBcIlRyeSBhZ2FpblwiO1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5zdHlsZS5jb2xvciA9IFwicmVkXCI7XG4gICAgfVxufSk7Il19</script></body></html>
